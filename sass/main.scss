@@ -17,7 +17,6 @@ sans-serif;
 
 html {
     font-size: 10px;
-    background-color: $mainBgc-color;
     font-family: $default-font;
     color: white;
 }
@@ -116,7 +115,7 @@ html {
 
     &__item {
         margin-right: 20px;
-        font-size: 2rem;
+        font-size: 1.6rem;
         text-transform: uppercase;
         border-bottom: 1px solid #000;
 
@@ -146,11 +145,71 @@ html {
     }
 }
 
+.article {
+    padding: 30px 50px;
+    color: black;
+
+    &__image {
+        display: block;
+        width: 100%;
+    }
+
+    &__title {
+        text-align: center;
+        font-family: $special-font;
+        text-transform: uppercase;
+        font-size: 2rem;
+        padding: 15px 0;
+    }
+
+    &__introduction {
+        line-height: 1.6;
+        font-size: 1.4rem;
+    }
+
+    &__btn {
+        display: block;
+        width: 40%;
+        font-size: 1.3rem;
+        border: 1px solid rgba(20, 20, 20, 0.171);
+        padding: 5px 10px;
+        margin: 10px 0 0 auto;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        transition: .2s ease-in-out;
+
+        &:hover {
+            background-color: rgb(77, 77, 77);
+            color: white;
+            letter-spacing: 1px;
+        }
+    }
+}
+
 .main-articles {
     flex-basis: 100%;
-    // min-height: 50vh;
-    background-color: rgb(37, 153, 37);
+    background-color: $mainBgc-color;
+    display: flex;
+    //wrap przejscie do nowej lini article gdy intro ma width 100%
+    flex-wrap: wrap;
+
+    &__intro {
+        flex-basis: 100%;
+        padding: 10px 0;
+        background-color: rgba(0, 0, 0, 0.226);
+        margin: 60px 0 30px;
+        text-align: center;
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+    .article {
+        flex-basis: 50%;
+    }
 }
+
+.article {}
 
 .article-list {
     flex-basis: 100%;
