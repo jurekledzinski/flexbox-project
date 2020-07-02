@@ -102,13 +102,54 @@ html {
 
 .menu {
     flex-basis: 100%;
-    background-color: darkblue;
+    height: 70px;
+    margin-top: 10px;
+    background-color: rgb(25, 25, 39);
+    font-family: $special-font;
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        margin: 20px 50px 20px 80px;
+        // background-color: red;
+    }
+
+    &__item {
+        margin-right: 20px;
+        font-size: 2rem;
+        text-transform: uppercase;
+        border-bottom: 1px solid #000;
+
+        &:hover {
+            border-bottom-color: orangered;
+        }
+
+        &:nth-last-child(1) {
+            margin-left: auto;
+            border: 1px solid #666;
+
+            &:hover {
+                border-color: orangered;
+            }
+
+            .menu__link--visible {
+                padding: 0 15px;
+            }
+        }
+
+    }
+
+    &__link {
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
 }
 
 .main-articles {
     flex-basis: 100%;
     // min-height: 50vh;
-    background-color: rgb(11, 19, 13);
+    background-color: rgb(37, 153, 37);
 }
 
 .article-list {
