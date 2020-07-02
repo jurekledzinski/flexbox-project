@@ -149,6 +149,10 @@ html {
     padding: 30px 50px;
     color: black;
 
+    &--small {
+        padding: 20px 30px;
+    }
+
     &__image {
         display: block;
         width: 100%;
@@ -160,6 +164,13 @@ html {
         text-transform: uppercase;
         font-size: 2rem;
         padding: 15px 0;
+
+        // article--small i w tym modyfikatorze article__title
+        .article--small & {
+            padding: 25px 0 10px;
+            font-size: 1.3rem;
+            background-color: $mainBgc-color;
+        }
     }
 
     &__introduction {
@@ -204,16 +215,24 @@ html {
         letter-spacing: 2px;
     }
 
+    //tu image ma 100% article
+
     .article {
         flex-basis: 50%;
     }
 }
 
-.article {}
-
 .article-list {
     flex-basis: 100%;
-    background: rgb(182, 131, 36);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    // fajny efekt daje wykorzystanie przestrzeni dzieki flex-grow i ustawieniu elementu takze flex-basis
+    &__article {
+        flex-basis: 30%;
+        // flex-grow: 1;
+    }
 }
 
 .footer {
