@@ -39,10 +39,50 @@ html {
 }
 
 .search {
-  background-color: #062627;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.search__input {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  height: 30%;
+  margin-right: 2vh;
+  padding: 0 10px;
+  font-size: 1.4rem;
+}
+
+.search__input:focus {
+  -webkit-box-shadow: 0 0 2px 1px #8daae5;
+          box-shadow: 0 0 2px 1px #8daae5;
+}
+
+.search__btn {
+  height: 30%;
+  font-size: 1.4rem;
+  padding: 0 10px;
+  border: 1px solid black;
+  background-color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.search__btn:hover {
+  background-color: black;
+  color: #fff;
 }
 
 .settings {

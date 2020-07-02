@@ -46,8 +46,40 @@ html {
 }
 
 .search {
-    background-color: rgb(6, 38, 39);
     flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__input {
+        flex-basis: 60%;
+        height: 30%;
+        margin-right: 2vh;
+        padding: 0 10px;
+        font-size: 1.4rem;
+
+        &:focus {
+            box-shadow: 0 0 2px 1px $mainBgc-color;
+        }
+    }
+
+    &__btn {
+        height: 30%;
+        font-size: 1.4rem;
+        padding: 0 10px;
+        border: 1px solid black;
+        background-color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+            background-color: black;
+            color: #fff;
+        }
+    }
+
 }
 
 .settings {
