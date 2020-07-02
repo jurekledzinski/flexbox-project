@@ -8,3 +8,25 @@ $special-font: 'PT sans',
 'roboto',
 arial,
 sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    background-color: $mainBgc-color;
+    font-family: $default-font;
+}
+
+.wrapper {
+    //kontener
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    background-color: #fff;
+    margin: 0 auto;
+    box-shadow: 0 0 4px 0 #000;
+}
