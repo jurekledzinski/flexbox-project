@@ -52,11 +52,23 @@ html {
           justify-content: center;
 }
 
+@media (max-width: 799px) {
+  .search {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin: 10px 0 20px;
+  }
+}
+
 .search__input {
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
   height: 30%;
   max-height: 30px;
+  min-height: 30px;
   margin-right: 2vh;
   padding: 0 10px;
   font-size: 1.4rem;
@@ -70,6 +82,7 @@ html {
 .search__btn {
   height: 30%;
   max-height: 30px;
+  min-height: 30px;
   font-size: 1.4rem;
   padding: 0 10px;
   border: 1px solid black;
@@ -94,6 +107,17 @@ html {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 30px 0 50px;
+}
+
+@media (max-width: 799px) {
+  .settings {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 .settings__icon-link {
@@ -233,6 +257,13 @@ html {
       flex-basis: 50%;
 }
 
+@media (max-width: 799px) {
+  .main-articles .article {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
 .article-list {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -250,6 +281,20 @@ html {
       flex-basis: 30%;
 }
 
+@media (max-width: 1023px) {
+  .article-list__article {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+}
+
+@media (max-width: 799px) {
+  .article-list__article {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -262,9 +307,23 @@ html {
   padding: 20px;
 }
 
+@media (max-width: 799px) {
+  .footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .footer .sm-links {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
+}
+
+@media (max-width: 799px) {
+  .footer .sm-links {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 .sm-links {
